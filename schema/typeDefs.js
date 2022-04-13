@@ -14,6 +14,14 @@ const typeDefs = gql`
     students: [ID!]
   }
 
+  type Game {
+    id: ID!
+    name: String!
+    playersPerMonth: Int!
+    rating: Int!
+    url: String!
+  }
+
   type Student {
     id: ID!
     nickname: String!
@@ -27,8 +35,10 @@ const typeDefs = gql`
   type Query {
     students: [Student!]!
     parents: [Parent!]!
+    games: [Game!]!
     student(id: ID!): Student
     parent(id: ID!): Parent
+    game(id: ID!): Game
   }
 
   enum Section {
