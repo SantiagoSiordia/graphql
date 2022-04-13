@@ -14,6 +14,11 @@ const resolvers = {
     games: () => GameList,
     game: (_, { id }) => GameList.find((game) => game.id === id),
   },
+  Student: {
+    favoriteGames: () => {
+      return GameList.filter((game) => game.playersPerMonth < 100);
+    },
+  },
 };
 
 module.exports = {

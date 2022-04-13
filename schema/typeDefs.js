@@ -30,6 +30,7 @@ const typeDefs = gql`
     hadActiveSections: [Section!]
     hasRegisteredParent: Boolean!
     parents: [ID!]
+    favoriteGames: [Game]
   }
 
   type Query {
