@@ -1,17 +1,38 @@
 const { gql } = require("apollo-server");
 
 const typeDefs = gql`
+  type CreditCard {
+    expirationDate: String!
+    number: String!
+    name: String!
+  }
+
+  type Parent {
+    id: ID!
+    creditCard: CreditCard!
+    hasRegisteredStudents: Boolean!
+    students: [ID!]
+  }
+
   type Student {
     id: ID!
     nickname: String!
     year: Int!
-    activeSection: String!
-    hadActiveSections: [String!]
+    activeSection: Section!
+    hadActiveSections: [Section!]
+    hasRegisteredParent: Boolean!
+    parents: [ID!]
   }
 
   type Query {
     students: [Student!]!
-    # student: Student!
+    parents: [Parent!]!
+  }
+
+  enum Section {
+    PRIMARIA
+    SECUNDARIA
+    PREPARATORIA
   }
 `;
 

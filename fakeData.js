@@ -1,41 +1,85 @@
 const StudentList = [
   {
-    id: "Some ID 1",
+    id: "Student ID 1",
     nickname: "Santi",
     year: 6,
-    activeSection: "Primaria",
-    hadActiveSections: ["Primaria"],
+    activeSection: "PRIMARIA",
+    hadActiveSections: ["PRIMARIA"],
+    hasRegisteredParent: false,
+    parents: [],
   },
   {
-    id: "Some ID 2",
+    id: "Student ID 2",
     nickname: "Olivers",
     year: 2,
-    activeSection: "Secundaria",
-    hadActiveSections: ["Primaria", "Secundaria"],
+    activeSection: "SECUNDARIA",
+    hadActiveSections: ["PRIMARIA", "SECUNDARIA"],
+    hasRegisteredParent: true,
+    parents: ["Parent ID 1"],
   },
   {
-    id: "Some ID 3",
+    id: "Student ID 3",
     nickname: "Lissandroid",
     year: 3,
-    activeSection: "Preparatoria",
-    hadActiveSections: ["Secundaria", "Preparatoria"],
+    activeSection: "PREPARATORIA",
+    hadActiveSections: ["SECUNDARIA", "PREPARATORIA"],
+    hasRegisteredParent: true,
+    parents: ["Parent ID 2"],
   },
   {
-    id: "Some ID 4",
+    id: "Student ID 4",
     nickname: "Rodo",
     year: 2,
-    activeSection: "Secundaria",
-    hadActiveSections: ["Secundaria"],
+    activeSection: "SECUNDARIA",
+    hadActiveSections: ["SECUNDARIA"],
+    hasRegisteredParent: true,
+    parents: ["Parent ID 3"],
   },
   {
-    id: "Some ID 5",
+    id: "Student ID 5",
     nickname: "Lasso",
     year: 6,
-    activeSection: "Preparatoria",
-    hadActiveSections: ["Preparatoria"],
+    activeSection: "PREPARATORIA",
+    hadActiveSections: ["PREPARATORIA"],
+    hasRegisteredParent: false,
+    parents: [],
+  },
+];
+
+const ParentsList = [
+  {
+    id: "Parent ID 1",
+    creditCard: {
+      expirationDate: "05/05/2025",
+      number: "1234123412341234",
+      name: "Rail",
+    },
+    hasRegisteredStudents: true,
+    students: ["Student ID 2"],
+  },
+  {
+    id: "Parent ID 2",
+    creditCard: {
+      expirationDate: "05/05/2025",
+      number: "1234123412341234",
+      name: "Erika",
+    },
+    hasRegisteredStudents: true,
+    students: ["Student ID 3"],
+  },
+  {
+    id: "Parent ID 2",
+    creditCard: {
+      expirationDate: "05/05/2025",
+      number: "1234123412341234",
+      name: "Erika",
+    },
+    hasRegisteredStudents: true,
+    students: ["Student ID 4"],
   },
 ];
 
 module.exports = {
   StudentList,
+  ParentsList
 };
