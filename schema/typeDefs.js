@@ -27,6 +27,8 @@ const typeDefs = gql`
   type Query {
     students: [Student!]!
     parents: [Parent!]!
+    student(id: ID!): Student
+    parent(id: ID!): Parent
   }
 
   enum Section {
