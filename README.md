@@ -1,7 +1,7 @@
 # graphql
 This repo is to test how graphql works.
 
-## For frontend devs.
+## Running this fake API.
 
 There are a couple things you need to install
 
