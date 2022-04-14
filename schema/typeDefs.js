@@ -42,6 +42,25 @@ const typeDefs = gql`
     game(id: ID!): Game
   }
 
+  input CreateStudentInput {
+    nickname: String!
+    year: Int!
+    activeSection: Section!
+    hasRegisteredParent: Boolean = False
+    parents: [ID!] = null
+  }
+
+  input UpdateStudentNickName {
+    nickname: String!
+    newNickname: String!
+  }
+
+  type Mutation {
+    createStudent(input: CreateStudentInput!): Student!
+    updateStudentNickname(input: UpdateStudentNickName!): Student!
+    deleteStudent(id: ID!): User
+  }
+
   enum Section {
     PRIMARIA
     SECUNDARIA
