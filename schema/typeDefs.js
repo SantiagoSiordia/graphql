@@ -58,7 +58,7 @@ const typeDefs = gql`
   type Mutation {
     createStudent(input: CreateStudentInput!): Student!
     updateStudentNickname(input: UpdateStudentNickName!): Student!
-    deleteStudent(id: ID!): User
+    deleteStudent(id: ID!): Student
   }
 
   enum Section {

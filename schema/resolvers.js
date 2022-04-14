@@ -1,4 +1,5 @@
 const { StudentList, ParentsList, GameList } = require("../fakeData");
+const { remove } = require("lodash");
 
 const resolvers = {
   Query: {
@@ -37,11 +38,9 @@ const resolvers = {
       };
       return StudentList[studentIndex];
     },
-    deleteStudent: (_, { input: ID }) => {
-      StudentList = StudentList.filter(
-        (student) => student.nickname !== nickname
-      );
-      return "Done";
+    deleteStudent: (_, { id }) => {
+      remove(StudentList, (student) => student.id === id);
+      return null;
     },
   },
 };
