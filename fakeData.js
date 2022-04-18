@@ -37,7 +37,7 @@ const StudentList = [
   },
   {
     id: "Student ID 5",
-    nickname: "Lasso",
+    nickname: "Abdelsito",
     year: 6,
     activeSection: "PREPARATORIA",
     hadActiveSections: ["PREPARATORIA"],
