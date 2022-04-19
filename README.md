@@ -9,6 +9,8 @@ There are a couple things you need to install
 
 - **Node**. Mine is 16.14.0, but I don't see why newer versions wouldnt work.
 
+> ⚠️ **Los datos no son reales**: Estas estructuras de datos contienen tanto propiedades reales pero que pueden cambiar y datos falsos agregados por mi. No se debería tomar estas estructuras como definitivas.
+
 ### Steps
 
 After cloning the repo and being in the `main branch` run this next command to run the app:
