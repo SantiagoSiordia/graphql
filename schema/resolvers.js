@@ -1,10 +1,13 @@
 const { StudentList, ParentsList, GameList } = require("../fakeData");
-const { remove } = require("lodash");
+const { remove, slice } = require("lodash");
 
 const resolvers = {
   Query: {
     // Students resolvers
-    students: () => StudentList,
+    students: (_, { first }) => {
+      if (first === undefined) return StudentList;
+      return StudentList.slice(0, first);
+    },
     student: (_, { id }) => StudentList.find((student) => student.id === id),
 
     // Parents Resolvers

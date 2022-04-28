@@ -33,8 +33,12 @@ const typeDefs = gql`
     favoriteGames: [Game]
   }
 
+  input StudentsInput {
+    first: Int
+  }
+  
   type Query {
-    students: [Student!]!
+    students(input: StudentsInput): [Student!]!
     parents: [Parent!]!
     games: [Game!]!
     student(id: ID!): Student
